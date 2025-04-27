@@ -1,43 +1,43 @@
-/* base dark background for the app */
+/* Set up a smooth dark mode background for the app */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #141e30, #243b55);
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
   font-family: 'Poppins', 'Roboto', sans-serif;
-  color: #f0f0f0;
+  color: #eaeaea;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* modern centered animated gradient title */
+/* Clean centered animated neon title */
 h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: bold;
-  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
-  background-size: 600% 600%;
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 10s ease infinite;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  animation: neonShift 6s ease infinite;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-/* keyframes to animate title gradient */
-@keyframes gradientShift {
+/* Keyframes to animate the shifting gradient in the title */
+@keyframes neonShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* loading and error messages */
+/* Center and style loading and error messages */
 h2 {
   text-align: center;
   font-weight: normal;
 }
 
-/* center the main container */
+/* Main container centered layout */
 main {
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ main {
   padding: 2rem;
 }
 
-/* responsive grid layout for tour cards */
+/* Responsive grid layout for tour cards */
 section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -55,73 +55,74 @@ section {
   margin: 0 auto;
 }
 
-/* modern tour card style */
+/* Modern glassmorphism style for tour cards */
 article {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover effect for cards */
+/* Card hover animation for depth */
 article:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 48px rgba(0, 255, 200, 0.25);
 }
 
-/* tour image settings */
+/* Tour card image settings */
 article img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-/* inner content of cards */
+/* Inner padding for card content */
 article div {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
-/* tour name styling */
+/* Tour name styling */
 article h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 
-/* tour price with slight glow */
+/* Tour price with slight neon glow */
 article h4 {
   font-size: 1.2rem;
-  color: #91eae4;
-  text-shadow: 0 0 8px rgba(145, 234, 228, 0.5);
+  color: #00f5a0;
+  text-shadow: 0 0 10px rgba(0, 245, 160, 0.4);
   margin-bottom: 1rem;
 }
 
-/* tour description */
+/* Tour description paragraph styling */
 article p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #cccccc;
-  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #c0c0c0;
+  margin-bottom: 1rem;
 }
 
-/* super modern button */
+/* Super modern glowing button style */
 button {
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
   border: none;
   border-radius: 30px;
-  padding: 0.9rem 2rem;
-  color: white;
+  padding: 0.8rem 2rem;
+  color: #121212;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 5px 20px rgba(255, 126, 95, 0.4);
-  transition: background 0.4s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0, 245, 160, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* glowing hover effect for button */
+/* Button hover effect with glowing background */
 button:hover {
-  background: linear-gradient(135deg, #86a8e7, #91eae4);
-  box-shadow: 0 5px 25px rgba(145, 234, 228, 0.5);
+  background: linear-gradient(90deg, #00d9f5, #00f5a0);
   transform: translateY(-2px);
+  box-shadow: 0 5px 25px rgba(0, 245, 160, 0.5);
 }
