@@ -47,8 +47,9 @@ function App() {
     return <h2>Something went wrong. Please try again later.</h2>;
   }
 
-  // If no tours are left, show a "Refresh" button to refetch the data
-  if (tours.length === 0) {
+ 
+   // If no tours are left, show a "Refresh" button to refetch the data
+   if (tours.length === 0) {
     return (
       <main>
         <h2>No Tours Left</h2>
