@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Gallery from "./components/Gallery";
+import corsFix from "./corsProxy";
 
 // Fetch tours from https://course-api.com/react-tours-project using useEffect
 // Store in state: tours, loading, error
-const url = "https://cors-anywhere.herokuapp.com/https://course-api.com/react-tours-project";
+const url = `${corsFix}https://course-api.com/react-tours-project`;
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -35,7 +36,6 @@ function App() {
     setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
   };
 
-
   // If loading is true, display "Loading..."
   // If error, display an error message
   // Else, render Gallery with tour data
@@ -47,9 +47,8 @@ function App() {
     return <h2>Something went wrong. Please try again later.</h2>;
   }
 
- 
-   // If no tours are left, show a "Refresh" button to refetch the data
-   if (tours.length === 0) {
+  // If no tours are left, show a "Refresh" button to refetch the data
+  if (tours.length === 0) {
     return (
       <main>
         <h2>No Tours Left</h2>
