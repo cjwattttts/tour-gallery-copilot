@@ -13,15 +13,15 @@ body {
 /* Clean centered animated neon title */
 h1 {
   text-align: center;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: bold;
   background: linear-gradient(90deg, #00f5a0, #00d9f5);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: neonShift 6s ease infinite;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Keyframes to animate the shifting gradient in the title */
