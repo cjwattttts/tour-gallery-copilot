@@ -35,9 +35,6 @@ function App() {
     setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
   };
 
-  // If loading is true, display "Loading..."
-  // If error, display an error message
-  // Else, render Gallery with tour data
   if (loading) {
     return <h2>Loading...</h2>;
   }
