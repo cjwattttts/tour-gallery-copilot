@@ -13,7 +13,7 @@ body {
 /* Clean centered animated neon title */
 h1 {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 7rem;
   font-weight: bold;
   background: linear-gradient(90deg, #00f5a0, #00d9f5);
   background-size: 300% 300%;
